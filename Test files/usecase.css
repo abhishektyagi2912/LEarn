@@ -1,31 +1,28 @@
-h1{
-    display: flex;
-    justify-content: center;
-    color: white;
-} 
-
-
-* {
+*{
   box-sizing: border-box;
   background-color: black;
 }
 
-/* Create two equal columns that floats next to each other */
-.column {
-  float: left;
-  width: 50%;
-  padding: 10px;
-   height: 300px; /*Should be removed. Only for demonstration */
+.heading{
+  text-align: center;
+  color: white;
 }
 
-/* Clear floats after the columns */
-.row:after {
+.columns{
+  float: left;
+  width: 50%;
+  padding: 12px;
+  min-height: 300px;
+}
+
+.rows:after{
   content: "";
   display: table;
   clear: both;
 }
 
-  p{
-    display: flex;
-    color: white;
+@media screen and (max-width: 768px) {
+  .columns{
+    width: 100%;
   }
+}
