@@ -140,37 +140,3 @@ const clickCheck = (e) => {
 
 // Add function to all trails
 // trail.forEach(cur => cur.addEventListener("click", (ev) => clickCheck(ev)))
-
-// Mobile touch Slide Section
-const touchSlide = (() => {
-    let start, move, change, sliderWidth
-
-    // Do this on initial touch on screen
-    slider.addEventListener("touchstart", (e) => {
-        // get the touche position of X on the screen
-        start = e.touches[0].clientX
-        // (each slide with) the width of the slider container divided by the number of slides
-        sliderWidth = slider.clientWidth/trail.length
-    })
-    
-    // Do this on touchDrag on screen
-    slider.addEventListener("touchmove", (e) => {
-        // prevent default function
-        e.preventDefault()
-        // get the touche position of X on the screen when dragging stops
-        move = e.touches[0].clientX
-        // Subtract initial position from end position and save to change variabla
-        change = start - move
-    })
-
-    const mobile = (e) => {
-        // if change is greater than a quarter of sliderWidth, next else Do NOTHING
-        change > (sliderWidth/4)  ? slide("increase") : null;
-        // if change * -1 is greater than a quarter of sliderWidth, prev else Do NOTHING
-        (change * -1) > (sliderWidth/4) ? slide("decrease") : null;
-        // reset all variable to 0
-        [start, move, change, sliderWidth] = [0,0,0,0]
-    }
-    // call mobile on touch end
-    slider.addEventListener("touchend", mobile)
-})()
