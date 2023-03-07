@@ -1,0 +1,255 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Responsive Navigation Bar</title>
+  <link rel="stylesheet" href="index.css">
+  <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+
+</head>
+
+<body style="background-color: black; width: 98vw;">
+<!-- Code for navbar starts here -->
+  <nav class="navbar">
+    <a href="#" class="navbar-brand"><span>W</span>eb<span>D</span>ev</a>
+<!--     <a href="#" class="navbar-brand"><img src="https://www.dropbox.com/s/zzwcz0xpj95sy7p/logo%20%2810%29.png?raw=1" style="width: 50px; vertical-align: middle;"></a> -->
+    <ul>
+      <li><a href="#html">HTML</a></li>
+      <li><a href="#css">CSS</a></li>
+      <li><a href="#javascript">JavaScript</a></li>
+    </ul>
+    <button class="navbar-toggler">
+      <span></span>
+    </button>
+  </nav>
+<!-- Code for navbar ends here -->
+<!-- Code for slider starts here -->
+  <main>
+    <!-- DEMO HTML -->
+    <div class="container">
+      <div class="slider">
+
+        <div class="box1 box">
+          <div class="bg"></div>
+          <div class="details">
+            <h1>I'm the first Box</h1>
+            <p>
+              Lorem ipsum dolor sit amet, consectetur adipiscing
+              elit. Integer lacinia dui lectus. Donec scelerisque ipsum
+              diam, ac mattis orci pellentesque eget.
+            </p>
+            <button>Check Now</button>
+          </div>
+
+          <div class="illustration">
+            <div class="inner"></div>
+          </div>
+        </div>
+
+
+        <div class="box2 box">
+          <div class="bg"></div>
+          <div class="details">
+            <h1>I'm the second Box</h1>
+            <p>
+              Lorem ipsum dolor sit amet, consectetur adipiscing
+              elit. Integer lacinia dui lectus. Donec scelerisque ipsum
+              diam, ac mattis orci pellentesque eget.
+            </p>
+            <button>Check Now</button>
+          </div>
+
+          <div class="illustration">
+            <div class="inner"></div>
+          </div>
+        </div>
+
+        <div class="box3 box">
+          <div class="bg"></div>
+          <div class="details">
+            <h1>I'm the third Box</h1>
+            <p>
+              Lorem ipsum dolor sit amet, consectetur adipiscing
+              elit. Integer lacinia dui lectus. Donec scelerisque ipsum
+              diam, ac mattis orci pellentesque eget.
+            </p>
+            <button>Check Now</button>
+          </div>
+
+          <div class="illustration">
+            <div class="inner"></div>
+          </div>
+        </div>
+
+        <div class="box4 box">
+          <div class="bg"></div>
+          <div class="details">
+            <h1>I'm the fourth Box</h1>
+            <p>
+              Lorem ipsum dolor sit amet, consectetur adipiscing
+              elit. Integer lacinia dui lectus. Donec scelerisque ipsum
+              diam, ac mattis orci pellentesque eget.
+            </p>
+            <button>Check Now</button>
+          </div>
+
+          <div class="illustration">
+            <div class="inner"></div>
+          </div>
+        </div>
+
+        <div class="box5 box">
+          <div class="bg"></div>
+          <div class="details">
+            <h1>I'm the fifth Box</h1>
+            <p>
+              Lorem ipsum dolor sit amet, consectetur adipiscing
+              elit. Integer lacinia dui lectus. Donec scelerisque ipsum
+              diam, ac mattis orci pellentesque eget.
+            </p>
+            <button>Check Now</button>
+          </div>
+
+          <div class="illustration">
+            <div class="inner"></div>
+          </div>
+        </div>
+
+      </div>
+
+      <!-- <svg xmlns="http://www.w3.org/2000/svg" class="prev" width="56.898" height="91" viewBox="0 0 56.898 91">
+        <path d="M45.5,0,91,56.9,48.452,24.068,0,56.9Z" transform="translate(0 91) rotate(-90)" fill="#fff" />
+      </svg>
+      <svg xmlns="http://www.w3.org/2000/svg" class="next" width="56.898" height="91" viewBox="0 0 56.898 91">
+        <path d="M45.5,0,91,56.9,48.452,24.068,0,56.9Z" transform="translate(56.898) rotate(90)" fill="#fff" /> -->
+      <!-- </svg> -->
+      <div class="trail">
+        <div class="box1 active">1</div>
+        <div class="box2">2</div>
+        <div class="box3">3</div>
+        <div class="box4">4</div>
+        <div class="box5">5</div>
+      </div>
+    </div>
+    <!-- END DEMO HTML -->
+  </main>
+  <!-- Code for slider ends here -->
+  <!-- code for use cases starts here -->
+  <h1 class="heading">What's in there for you</h1>
+
+  <div class="rows" >
+      <div class="columns" data-aos="fade-right"
+      data-aos-offset="200"
+      data-aos-delay="100"
+      data-aos-duration="1000">
+          <h2 class="heading">Left Column</h2>
+          <div style="color: white;">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Ea quae iure tempora illo non mollitia, excepturi nobis eos voluptatum! Quis qui et voluptatem impedit beatae cupiditate, deserunt debitis eum fugit?</div>
+      </div>
+      <div class="columns" data-aos="fade-left"
+      data-aos-offset="200"
+      data-aos-delay="100"
+      data-aos-duration="1000">
+          <h2 class="heading">Right Column</h2>
+          <img src="img\Call center-cuate.svg" alt="" width="20%" height="20%" style="margin-left: 40%;">
+      </div>
+  </div>
+
+  <div class="rows">
+      <div class="columns" data-aos="fade-right"
+      data-aos-offset="200"
+      data-aos-delay="100"
+      data-aos-duration="1000">
+          <h2 class="heading">Right Column</h2>
+          <img src="img\Call center-cuate.svg" alt="" width="20%" height="20%">
+      </div>
+      <div class="columns" data-aos="fade-left"
+      data-aos-offset="200"
+      data-aos-delay="100"
+      data-aos-duration="1000">
+          <h2 class="heading">Left Column</h2>
+          <div style="color: white;">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Ea quae iure tempora illo non mollitia, excepturi nobis eos voluptatum! Quis qui et voluptatem impedit beatae cupiditate, deserunt debitis eum fugit?</div>
+      </div>
+  </div>
+
+
+  <div class="rows">
+      <div class="columns" data-aos="fade-right"
+      data-aos-offset="200"
+      data-aos-delay="100"
+      data-aos-duration="1000">
+          <h2 class="heading">Left Column</h2>
+          <div style="color: white;">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Ea quae iure tempora illo non mollitia, excepturi nobis eos voluptatum! Quis qui et voluptatem impedit beatae cupiditate, deserunt debitis eum fugit?</div>
+      </div>
+      <div class="columns" data-aos="fade-left"
+      data-aos-offset="200"
+      data-aos-delay="100"
+      data-aos-duration="1000">
+          <h2 class="heading">Right Column</h2>
+          <img src="img\Call center-cuate.svg" alt="" width="20%" height="20%">
+      </div>
+  </div>
+
+    <!-- code for use cases ends here here -->
+    <!-- Code for courses starts here -->
+  <div class="ag-format-container">
+    <h2 style="color:white;width:98vw;font-size: 2rem; text-align: center; padding:1 rem;margin-top:15px; ">Get Started
+      With Most Popular Courses in the Town</h2>
+    <div class="ag-courses_box">
+      <!-- <h1 style="color:white;width:98vw;font-size: 2rem; text-align: center; padding:1 rem;margin:23px">Get Started With Most Popular Courses in Town</h1> -->
+      <div class="ag-courses_item">
+        <a href="#" class="ag-courses-item_link">
+          <div class="ag-courses-item_bg"></div>
+
+          <div class="ag-courses-item_title">
+            Programming Basics
+          </div>
+        </a>
+      </div>
+
+      <div class="ag-courses_item">
+        <a href="#" class="ag-courses-item_link">
+          <div class="ag-courses-item_bg"></div>
+
+          <div class="ag-courses-item_title">
+            Web Design
+          </div>
+        </a>
+      </div>
+
+      <div class="ag-courses_item">
+        <a href="#" class="ag-courses-item_link">
+          <div class="ag-courses-item_bg"></div>
+
+          <div class="ag-courses-item_title">
+            Data Structure and Algorithms
+          </div>
+        </a>
+      </div>
+
+      <div class="ag-courses_item">
+        <a href="#" class="ag-courses-item_link">
+          <div class="ag-courses-item_bg"></div>
+
+          <div class="ag-courses-item_title">
+            Machine Learning
+          </div>
+        </a>
+      </div>
+
+    </div>
+  </div>
+  <!-- course for courses ends here -->
+ 
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.3.2/gsap.min.js"></script>
+  <!-- CSSRulePlugin JS -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.3.2/CSSRulePlugin.min.js"></script>
+  <!-- <script src="home.js"></script> -->
+  <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+  <script>
+    AOS.init();
+  </script>
+  <script src="index.js"></script>
+</body>
+
+</html>
