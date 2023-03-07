@@ -104,10 +104,6 @@ body {
 @media (max-width: 767px) {
   .navbar {
     padding: 0;
-    width: 117vw;
-  }
-  .container{
-    width: 117vw;
   }
   .navbar ul {
     width: 100%;
@@ -203,9 +199,8 @@ body {
   animation-iteration-count: infinite;
   animation-play-state: running;
 }
-@media only screen and (max-width: 2000px) {
+@media only screen and (max-width: 1000px) {
   .container{
-    
     width: 117vw;
   }
 }
