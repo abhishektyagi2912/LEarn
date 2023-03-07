@@ -14,7 +14,7 @@ body {
   background-color: #000;
   color: #fff;
   
-  width: 100%;
+  width: 98.8vw;
   height: 80px;
   line-height: 80px;
   font-size: 18px;
@@ -76,6 +76,9 @@ body {
   position: relative;
   height: 100vh;
   color: #fff;
+  width: 98.8vw;
+  margin:-38px;
+  margin-left: -39px;
 }
 .container h2 {
   position: absolute;
@@ -101,6 +104,10 @@ body {
 @media (max-width: 767px) {
   .navbar {
     padding: 0;
+    width: 117vw;
+  }
+  .container{
+    width: 117vw;
   }
   .navbar ul {
     width: 100%;
@@ -594,9 +601,9 @@ a.btn:hover{
 }
 main{
   background: black;
-  padding-top: 117px;
-  padding-left: 42px;
-  padding-bottom: 11px;
+  padding-top: 105px;
+  padding-left: 25px;
+  padding-bottom: 60px;
   border-radius: 2px;
  
 }
@@ -825,6 +832,7 @@ code{
 .heading{
   text-align: center;
   color: white;
+  padding-top: 1px;
 }
 
 .columns{
