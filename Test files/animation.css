@@ -1,0 +1,14 @@
+
+
+
+/* Define the keyframes */
+@keyframes changeColor {
+  0% { color: black; }
+  50% { color: blue; }
+  100% { color: red; }
+}
+
+/* Apply the animation */
+.text {
+  animation: changeColor 5s linear forwards;
+}
