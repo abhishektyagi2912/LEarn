@@ -137,6 +137,3 @@ const clickCheck = (e) => {
     // start interval
     start = setInterval(() => slide("increase"), interval)
 }
-
-// Add function to all trails
-// trail.forEach(cur => cur.addEventListener("click", (ev) => clickCheck(ev)))
