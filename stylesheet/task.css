@@ -1,0 +1,342 @@
+* {
+	box-sizing: border-box;
+	margin: 0;
+	padding: 0;
+}
+
+html,
+body {
+	width: 100%;
+	height: 100%;
+	font-family: 'Open Sans', sans-serif;
+	font-weight: 300;
+	background: black;
+}
+
+ul {
+	list-style: none;
+}
+
+a {
+	text-decoration: none;
+	color: white;
+}
+
+.Wrapper {
+	display: table;
+	width: 100%;
+	height: 100%;
+}
+
+.Sidebar {
+	position: relative;
+	display: table-cell;
+	min-width: 240px;
+	max-width: 240px;
+	min-height: 100%;
+	background-color: black;
+	border-right: 3px solid rgb(135, 7, 255);
+	transition: max-width 0.4s ease, min-width 0.4s ease;
+	user-select: none;
+}
+
+.Sidebar.is-collapsed {
+	max-width: 50px;
+	min-width: 50px;
+	transition: max-width 0.4s ease, min-width 0.4s ease;
+}
+
+.Sidebar.is-collapsed .Sidebar-logo {
+	transform: scale(0.625) translate(-64px, -104px);
+	transition: transform 0.4s ease;
+}
+
+.Sidebar.is-collapsed .Sidebar-navItem {
+	padding-left: 17px;
+	transition: padding-left 0.4s ease;
+}
+
+.Sidebar.is-collapsed .Sidebar-navItem a {
+	opacity: 0;
+}
+
+.Sidebar.is-collapsed .Sidebar-toggleText {
+	display: none;
+}
+
+.Sidebar.is-collapsed .Sidebar-toggleArrow {
+	left: 17.5px;
+	transform: rotate(179deg);
+}
+
+.Sidebar.is-collapsed .Sidebar-footer:hover .Sidebar-toggleArrow {
+	left: 17.5px;
+	transition: left 0.4s ease, transform 0.4s ease;
+}
+
+@media (max-width: 600px) {
+	.Sidebar {
+		min-width: 50px;
+	}
+}
+
+.Sidebar-header {
+	position: relative;
+	height: 130px;
+	margin-bottom: 50px;
+	text-align: center;
+}
+
+.Sidebar-logo {
+	position: absolute;
+	bottom: 0;
+	left: 50%;
+	transform: translateX(-40px);
+	display: inline-block;
+
+	transition: transform 0.4s ease, height 0.4s ease, width 0.4s ease;
+}
+
+@media (max-width: 600px) {
+	.Sidebar-logo {
+		transform: translate(-24px, -80px);
+		width: 50px;
+		height: 50px;
+	}
+}
+
+.Sidebar-navItem {
+	padding: 10px 0 10px 40px;
+	white-space: nowrap;
+	overflow: hidden;
+	transition: padding-left 0.4s ease;
+}
+
+@media (max-width: 500px) {
+	.Sidebar-navItem {
+		padding-left: 17px;
+	}
+}
+
+.Sidebar-navItem:hover {
+	background-color: rgb(135, 7, 255);
+	cursor: pointer;
+}
+
+.Sidebar-navItem a {
+	opacity: 1;
+	transition: opacity 0.4s ease;
+}
+
+@media (max-width: 600px) {
+	.Sidebar-navItem a {
+		display: none;
+	}
+}
+
+.Sidebar-menuIcon {
+	color: white;
+}
+
+.Sidebar-menuIcon:not(.Sidebar-toggleArrow) {
+	margin-right: 1rem;
+}
+
+.Main {
+	display: table-cell;
+	vertical-align: top;
+	width: 100%;
+	padding-left: 1.5rem;
+	color: aliceblue;
+	padding-top: 1rem;
+}
+
+@-moz-keyframes fadeIn {
+	0% {
+		opacity: 0;
+	}
+
+	100% {
+		opacity: 1;
+	}
+}
+
+@-webkit-keyframes fadeIn {
+	0% {
+		opacity: 0;
+	}
+
+	100% {
+		opacity: 1;
+	}
+}
+
+@-o-keyframes fadeIn {
+	0% {
+		opacity: 0;
+	}
+
+	100% {
+		opacity: 1;
+	}
+}
+
+@keyframes fadeIn {
+	0% {
+		opacity: 0;
+	}
+
+	100% {
+		opacity: 1;
+	}
+}
+/* CSs for opening popups starts here */
+.btn {
+	display: inline-block;
+	padding: 10px 20px;
+	border: 2px solid #00898E;
+	border-radius: 10px;
+	transition: background .3s;
+}
+
+.btn:hover {
+	background: #00898E;
+}
+
+.popup {
+	position: fixed;
+	padding: 10px;
+	max-width: 500px;
+	border-radius: 10px;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	background: rgba(255, 255, 255, .9);
+	visibility: hidden;
+	opacity: 0;
+	/* "delay" the visibility transition */
+	-webkit-transition: opacity .5s, visibility 0s linear .5s;
+	transition: opacity .5s, visibility 0s linear .5s;
+	z-index: 1;
+}
+
+.popup:target {
+	visibility: visible;
+	opacity: 1;
+	/* cancel visibility transition delay */
+	-webkit-transition-delay: 0s;
+	transition-delay: 0s;
+}
+
+.popup-close {
+	position: absolute;
+	padding: 10px;
+	max-width: 500px;
+	border-radius: 10px;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	background: rgba(255, 255, 255, .9);
+}
+
+.popup .close {
+	position: absolute;
+	right: 5px;
+	top: 5px;
+	padding: 5px;
+	color: #000;
+	transition: color .3s;
+	font-size: 2em;
+	line-height: .6em;
+	font-weight: bold;
+}
+
+.popup .close:hover {
+	color: #00E5EE;
+}
+
+.close-popup {
+	background: rgba(0, 0, 0, .7);
+	cursor: default;
+	position: fixed;
+	top: 0;
+	left: 0;
+	right: 0;
+	bottom: 0;
+	opacity: 0;
+	visibility: hidden;
+	/* "delay" the visibility transition */
+	-webkit-transition: opacity .5s, visibility 0s linear .5s;
+	transition: opacity .5s, visibility 0s linear .5s;
+}
+
+.popup:target+.close-popup {
+	opacity: 1;
+	visibility: visible;
+	/* cancel visibility transition delay */
+	-webkit-transition-delay: 0s;
+	transition-delay: 0s;
+}
+
+/* Css for opening popups ends here */
+/* Css for login form starts here */
+.login {
+  display: grid; 
+  grid-template-rows: 100px auto 50px;  
+  justify-content: center;
+  align-content: center; 
+  background-color: rgba(62, 55, 55, 0.62); 
+  height: 400px; 
+  width: 400px; 
+  border-radius: 5px; 
+  /* box-shadow:20px 20px 50px 15px black;   */
+}
+
+.login-form {
+  display: grid; 
+  grid-template-rows: 70px repeat(3, 50px);
+  grid-template-columns: 1fr; 
+  justify-items: stretch; 
+  grid-gap: 10px; 
+}
+
+h1 {
+  color: white; 
+  font-weight: 300; 
+  letter-spacing: 2px; 
+}
+
+
+input {
+  border: 1px solid rgba(252, 252, 252, 0.4);
+  background-color: rgba(252, 252, 252, 0.2);
+  width: 250px;
+  border-radius: 3px;
+  font-family: "Source Sans Pro", sans-serif;
+  padding: 10px 15px;
+  display: block;
+  text-align: center;
+  font-size: 18px;
+  color: white;
+  font-weight: 300;
+}
+
+button {
+  appearance: none;
+  outline: 0;
+  background-color: white;
+  border: 0;
+  padding: 10px 15px;
+  color: #50a3a2;
+  border-radius: 3px;
+  width: 250px;
+  font-size: 18px;
+}
+
+
+.item {
+  justify-self: center; 
+}
+/* Css for login form ends here */
+
+
